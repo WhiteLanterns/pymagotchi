@@ -2,12 +2,14 @@ import pyxel
 
 class Game():
     def __init__(self):
-        pyxel.init(160, 120)
+        pyxel.init(640, 480, "pymagotchi", 60)
+        pyxel.load("assets\music_loop.pyxres")
+        pyxel.playm(0, 0, True)
         self.x = 0
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.x = (self.x + 1) % pyxel.width
+        self.x = (self.x) % pyxel.width
 
     def draw(self):
         pyxel.cls(0)
