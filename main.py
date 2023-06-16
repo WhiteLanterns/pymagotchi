@@ -1,4 +1,6 @@
 import pyxel
+import enum
+from classes import *
 
 
 class Game:
@@ -7,6 +9,7 @@ class Game:
         pyxel.load("assets\music_loop.pyxres")
         pyxel.playm(0, 0, True)
         pyxel.load("assets\pet.pyxres")
+        self.pet = Pet(55, 55, 8, 8, 10, 5, 10, 10, 5)
         pyxel.run(self.update, self.draw)
 
     def update(self):
@@ -14,7 +17,7 @@ class Game:
 
     def draw(self):
         pyxel.cls(0)
-        pyxel.blt(55, 55, 0, 8, 0, 8, 8)
+        self.pet.draw()
 
 
 Game()
