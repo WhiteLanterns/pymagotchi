@@ -1,19 +1,20 @@
 import pyxel
 
-class Game():
+
+class Game:
     def __init__(self):
-        pyxel.init(640, 480, "pymagotchi", 60)
+        pyxel.init(120, 120, "pymagotchi", 60)
         pyxel.load("assets\music_loop.pyxres")
         pyxel.playm(0, 0, True)
-        self.x = 0
+        pyxel.load("assets\pet.pyxres")
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.x = (self.x) % pyxel.width
+        pass
 
     def draw(self):
         pyxel.cls(0)
-        pyxel.rect(self.x, 0, 8, 8, 9)
+        pyxel.blt(55, 55, 0, 8, 0, 8, 8)
 
 
 Game()
