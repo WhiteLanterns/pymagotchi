@@ -13,7 +13,7 @@ class Game:
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        pass
+        print(pyxel.frame_count)
 
     def draw(self):
         pyxel.cls(0)
