@@ -1,5 +1,4 @@
 import pyxel
-import enum
 from classes import *
 
 
@@ -13,7 +12,7 @@ class Game:
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        print(pyxel.frame_count)
+        pass
 
     def draw(self):
         pyxel.cls(0)
